@@ -2,10 +2,30 @@
 import { useEffect, useState, useRef } from 'react'
 
 const stats = [
-  { number: 18, suffix: '+', label: 'Years of Excellence', desc: 'Crafting perfection since 2006' },
-  { number: 550, suffix: '+', label: 'Weddings Crafted', desc: 'Each one a unique masterpiece' },
-  { number: 200, suffix: '+', label: 'Destinations', desc: 'Across all of India' },
-  { number: 50, suffix: '+', label: 'Trusted Venues', desc: 'Handpicked & vetted by us' },
+  {
+    number: 11,
+    suffix: '+',
+    label: 'Years of Excellence',
+    desc: 'Backed by 11 years of industry expertise',
+  },
+  {
+    number: 70,
+    suffix: '+',
+    label: 'Weddings Crafted',
+    desc: 'Luxury wedding experiences crafted with perfection',
+  },
+  {
+    number: 60,
+    suffix: '+',
+    label: 'Destinations',
+    desc: 'Wedding experiences across 60+ destinations',
+  },
+  {
+    number: 30,
+    suffix: '+',
+    label: 'Trusted Venues',
+    desc: 'Handpicked & vetted by us',
+  },
 ]
 
 function Counter({ target, suffix, duration = 2000 }) {
