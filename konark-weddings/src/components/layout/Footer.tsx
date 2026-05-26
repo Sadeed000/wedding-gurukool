@@ -55,7 +55,7 @@ export default function Footer() {
               <p className="font-dm-sans text-xs tracking-[0.3em] uppercase text-gold-400 -mt-1">Weddings</p>
             </div>
             <p className="font-dm-sans text-sm text-white/60 leading-relaxed mb-6">
-              Crafting spectacular celebrations with 18+ years of expertise and a passion for perfection. Your dream wedding, meticulously brought to life.
+              Crafting spectacular celebrations with 11+ years of expertise and a passion for perfection. Your dream wedding, meticulously brought to life.
             </p>
             {/* Social */}
             <div className="flex items-center gap-3">
@@ -106,21 +106,21 @@ export default function Footer() {
             <h4 className="font-dm-sans text-xs font-semibold tracking-[0.25em] uppercase text-gold-400 mb-6">Contact</h4>
             <ul className="space-y-4">
               <li>
-                <a href="tel:+917417416461" className="flex items-start gap-3 group">
+                <a href="tel:+919782667589" className="flex items-start gap-3 group">
                   <Phone size={15} className="mt-0.5 text-gold-400 flex-shrink-0" />
-                  <span className="font-dm-sans text-sm text-white/60 group-hover:text-gold-400 transition-colors">+91 7417416461</span>
+                  <span className="font-dm-sans text-sm text-white/60 group-hover:text-gold-400 transition-colors">+91 9782667589</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:dhakadp992@gmail.com" className="flex items-start gap-3 group">
+                <a href="mailto:weddinggurukuljpr@gmail.com" className="flex items-start gap-3 group">
                   <Mail size={15} className="mt-0.5 text-gold-400 flex-shrink-0" />
-                  <span className="font-dm-sans text-sm text-white/60 group-hover:text-gold-400 transition-colors">dhakadp992@gmail.com</span>
+                  <span className="font-dm-sans text-sm text-white/60 group-hover:text-gold-400 transition-colors">weddinggurukuljpr@gmail.com</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3">
                   <MapPin size={15} className="mt-0.5 text-gold-400 flex-shrink-0" />
-                  <span className="font-dm-sans text-sm text-white/60">Jaipur, Rajasthan, India</span>
+                  <span className="font-dm-sans text-sm text-white/60">E-564, Lal Kothi scheme, Jaipur</span>
                 </div>
               </li>
             </ul>

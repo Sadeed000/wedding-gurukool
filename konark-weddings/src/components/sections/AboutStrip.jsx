@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 const points = [
   'Boutique personalised service for every couple',
   'In-house design, floral & logistics teams',
-  'Trusted vendor network across 200+ venues',
+  'Trusted vendor network across 60+ venues',
   'End-to-end planning: concept to execution',
 ]
 
@@ -60,7 +60,7 @@ export default function AboutStrip() {
         {/* Gold badge */}
         <div className="absolute -bottom-6 -right-4 lg:-right-8 bg-gold-500 text-white p-6 shadow-gold-lg text-center hidden sm:block">
           <div className="font-cormorant text-4xl font-bold leading-none">
-            18+
+            11+
           </div>
           <div className="font-dm-sans text-xs tracking-widest uppercase mt-1">
             Years of
@@ -85,7 +85,7 @@ export default function AboutStrip() {
         </h2>
 
         <p className="font-dm-sans text-charcoal-600 leading-relaxed mb-6">
-          Born in the royal heart of Rajasthan, Wedding Gurukul has spent 18+
+          Born in the royal heart of Rajasthan, Wedding Gurukul has spent 11+
           years turning love stories into legendary celebrations. We blend deep
           cultural roots with contemporary luxury to craft weddings that feel
           timeless, personal, and absolutely spectacular.

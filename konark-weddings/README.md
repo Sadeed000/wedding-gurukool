@@ -7,7 +7,7 @@ A modern, luxury wedding & event management website built with **Next.js 14**, *
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+
+- Node.js 11+
 - MongoDB (local or [MongoDB Atlas](https://cloud.mongodb.com))
 
 ### 1. Install dependencies
@@ -29,7 +29,7 @@ EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
 EMAIL_USER=your@email.com
 EMAIL_PASS=your-app-password
-CONTACT_EMAIL=dhakadp992@gmail.com
+CONTACT_EMAIL=weddinggurukuljpr@gmail.com
 ```
 
 ### 3. Seed the database

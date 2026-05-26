@@ -18,7 +18,7 @@ import CTASection from '@/components/sections/CTASection'
 
 export const metadata = {
   title: 'Wedding Gurukul – Luxury Wedding Decor & Event Management',
-  description: 'With 18+ years of expertise, Wedding Gurukul has delivered 550+ spectacular celebrations across India. Luxury wedding decor, planning, and event management in Rajasthan & beyond.',
+  description: 'With 11+ years of expertise, Wedding Gurukul has delivered 300+ spectacular celebrations across India. Luxury wedding decor, planning, and event management in Rajasthan & beyond.',
   keywords: ['wedding planner', 'wedding gurukul', 'luxury wedding india', 'rajasthan wedding', 'destination wedding'],
 }
 

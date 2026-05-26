@@ -5,7 +5,7 @@ import { ArrowRight, Award, Heart, Users, Globe } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Who We Are',
-  description: 'Meet the passionate team behind Wedding Gurukuls — 18+ years crafting spectacular celebrations across India with creativity, elegance and meticulous attention to detail.',
+  description: 'Meet the passionate team behind Wedding Gurukuls — 11+ years crafting spectacular celebrations across India with creativity, elegance and meticulous attention to detail.',
 }
 
 const teamMembers = [
@@ -37,9 +37,9 @@ const teamMembers = [
 
 const values = [
   { icon: Heart, title: 'Passion', desc: 'Every celebration is personal. We pour our hearts into making your story extraordinary.' },
-  { icon: Award, title: 'Excellence', desc: '18+ years of delivering nothing short of perfection at every milestone.' },
+  { icon: Award, title: 'Excellence', desc: '11+ years of delivering nothing short of perfection at every milestone.' },
   { icon: Users, title: 'Partnership', desc: 'We listen, collaborate, and guide — your vision is always at the center.' },
-  { icon: Globe, title: 'Reach', desc: '200+ destinations, one consistent promise: spectacular, seamless celebrations.' },
+  { icon: Globe, title: 'Reach', desc: '60+ destinations, one consistent promise: spectacular, seamless celebrations.' },
 ]
 
 export default function AboutPage() {
@@ -69,48 +69,56 @@ export default function AboutPage() {
     </div>
   </div>
 </section>
-      {/* Mission */}
-      <section className="section-padding px-6 bg-cream-50">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="section-label">Our Mission</span>
-            <div className="gold-divider justify-start my-4"><span className="ornament">✦</span></div>
-            <h2 className="font-cormorant text-4xl lg:text-5xl text-charcoal-900 mt-4 mb-6">
-              Turning Visions Into<br />
-              <em className="text-gold-500">Timeless Memories</em>
-            </h2>
-            <p className="font-dm-sans text-charcoal-600 leading-relaxed mb-4">
-              Founded in 2006 by Mrs. Mandeep Agarwal, Wedding Gurukuls began with a single, unwavering belief: that every couple deserves a celebration as unique and beautiful as their love story.
-            </p>
-            <p className="font-dm-sans text-charcoal-600 leading-relaxed mb-4">
-              What started as a boutique decor studio in Jaipur has grown into one of India's most celebrated luxury wedding management companies, with a portfolio spanning 550+ weddings across 200+ destinations — from the shimmering lakes of Udaipur to the golden beaches of Goa.
-            </p>
-            <p className="font-dm-sans text-charcoal-600 leading-relaxed mb-8">
-              Our philosophy is simple: listen deeply, create boldly, execute flawlessly. We don't just manage events — we craft experiences that live in the hearts of every guest, forever.
-            </p>
-            <Link href="/contact" className="btn-gold">
-              Start Your Journey <ArrowRight size={16} />
-            </Link>
-          </div>
+ {/* Mission */}
+<section className="section-padding px-6 bg-cream-50">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div>
+      <span className="section-label">Our Mission</span>
+      <div className="gold-divider justify-start my-4">
+        <span className="ornament">✦</span>
+      </div>
 
-          <div className="relative">
-            <div className="relative h-[500px]">
-              <Image
-                src="/static-image/about2.webp"
-                alt="Wedding Gurukuls work"
-                fill
-                className="object-cover"
-              />
-            </div>
-            {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-6 bg-gold-500 text-white p-8 shadow-gold-lg">
-              <p className="font-cormorant text-5xl font-bold">18+</p>
-              <p className="font-dm-sans text-sm tracking-widest uppercase">Years of Excellence</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <h2 className="font-cormorant text-4xl lg:text-5xl text-charcoal-900 mt-4 mb-6">
+        Turning Visions Into<br />
+        <em className="text-gold-500">Timeless Memories</em>
+      </h2>
 
+      <p className="font-dm-sans text-charcoal-600 leading-relaxed mb-4">
+        Founded by Pradeep Dhakad, Wedding Gurukul is built on a refined vision: where elite craftsmanship meets flawless wedding design.
+      </p>
+
+      <p className="font-dm-sans text-charcoal-600 leading-relaxed mb-4">
+        Backed by an 11-year legacy of industry expertise, Pradeep Dhakad leads Wedding Gurukul with a detail-oriented and highly professional approach. His background as a science graduate from St. Wilfred&apos;s College, Jaipur, brings analytical precision into the creative world of luxury weddings.
+      </p>
+
+      <p className="font-dm-sans text-charcoal-600 leading-relaxed mb-8">
+        Today, Wedding Gurukul is known for creating high-end, bespoke wedding experiences across 60+ destinations, combining seamless execution, sophisticated design, and unforgettable guest experiences.
+      </p>
+
+      <Link href="/contact" className="btn-gold">
+        Start Your Journey <ArrowRight size={16} />
+      </Link>
+    </div>
+
+    <div className="relative">
+      <div className="relative h-[500px]">
+        <Image
+          src="/static-image/about2.webp"
+          alt="Wedding Gurukul luxury wedding design"
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      <div className="absolute -bottom-6 -left-6 bg-gold-500 text-white p-8 shadow-gold-lg">
+        <p className="font-cormorant text-5xl font-bold">11+</p>
+        <p className="font-dm-sans text-sm tracking-widest uppercase">
+          Years of Excellence
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       {/* Values */}
       <section className="section-padding px-6 bg-charcoal-900">
         <div className="max-w-7xl mx-auto">
@@ -169,9 +177,9 @@ export default function AboutPage() {
       <section className="bg-gold-500 py-14 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {[
-            { n: '550+', l: 'Weddings Celebrated' },
-            { n: '200+', l: 'Destinations' },
-            { n: '18+', l: 'Years Experience' },
+            { n: '300+', l: 'Weddings Celebrated' },
+            { n: '60+', l: 'Destinations' },
+            { n: '11+', l: 'Years Experience' },
             { n: '50+', l: 'Venue Partners' },
           ].map(({ n, l }) => (
             <div key={l}>

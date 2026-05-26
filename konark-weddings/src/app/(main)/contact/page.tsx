@@ -233,7 +233,7 @@ export default function ContactPage() {
             </p>
 
             <div className="space-y-6 mb-10">
-              <a href="tel:+917417416461" className="flex items-start gap-4 group">
+              <a href="tel:+919782667589" className="flex items-start gap-4 group">
                 <div className="w-12 h-12 bg-gold-50 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-500 transition-colors">
                   <Phone
                     size={18}
@@ -246,7 +246,7 @@ export default function ContactPage() {
                     Phone
                   </p>
                   <p className="font-cormorant text-xl text-charcoal-900 group-hover:text-gold-500 transition-colors">
-                    +91 7417416461
+                    +91 9782667589
                   </p>
                 </div>
               </a>
@@ -267,7 +267,7 @@ export default function ContactPage() {
                     Email
                   </p>
                   <p className="font-cormorant text-xl text-charcoal-900 group-hover:text-gold-500 transition-colors">
-                    dhakadp992@gmail.com
+                    weddinggurukuljpr@gmail.com
                   </p>
                 </div>
               </a>
@@ -282,7 +282,7 @@ export default function ContactPage() {
                     Office
                   </p>
                   <p className="font-cormorant text-xl text-charcoal-900">
-                    Jaipur, Rajasthan, India
+                    E-564, Lal Kothi scheme, Jaipur
                   </p>
                 </div>
               </div>
@@ -456,18 +456,19 @@ export default function ContactPage() {
       </section>
 
       {/* Map */}
-      <section className="h-80 bg-charcoal-200 relative overflow-hidden">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228131.29443898826!2d75.71867!3d26.88511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Wedding Gurukuls Office Location"
-        />
-      </section>
+ {/* Map */}
+<section className="h-80 bg-charcoal-200 relative overflow-hidden">
+  <iframe
+    src="https://www.google.com/maps?q=E-564,%20Lal%20Kothi%20Scheme,%20Jaipur&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="Wedding Gurukul Office Location"
+  />
+</section>
     </>
   )
 }

@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           </section>
           <section>
             <h2 className="text-xl font-serif text-charcoal mb-3">5. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:dhakadp992@gmail.com" className="text-gold hover:underline">dhakadp992@gmail.com</a>.</p>
+            <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:weddinggurukuljpr@gmail.com" className="text-gold hover:underline">weddinggurukuljpr@gmail.com</a>.</p>
           </section>
         </div>
       </div>

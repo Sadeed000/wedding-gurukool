@@ -29,29 +29,40 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://weddinggurukul.com'),
+
   title: {
     default: 'Wedding Gurukul – Luxury Wedding Decor & Event Management',
     template: '%s | Wedding Gurukul',
   },
-  description: 'With 18+ years of expertise, Wedding Gurukul has delivered 550+ spectacular celebrations across India. Luxury wedding decor, planning, and event management.',
+
+  description: 'With 11+ years of expertise, Wedding Gurukul has delivered 300+ spectacular celebrations across India. Luxury wedding decor, planning, and event management.',
+  icons: {
+    icon: 'images/logo-transparent.png',
+    shortcut: 'images/logo-transparent.png',
+    apple: 'images/logo-transparent.png',
+  },
+
   keywords: ['luxury wedding', 'wedding decor', 'event management', 'wedding planner India', 'Rajasthani wedding', 'destination wedding'],
   authors: [{ name: 'Wedding Gurukul' }],
   creator: 'Wedding Gurukul',
+
   openGraph: {
     type: 'website',
     locale: 'en_IN',
     url: 'https://weddinggurukul.com',
     siteName: 'Wedding Gurukul',
     title: 'Wedding Gurukul – Luxury Wedding Decor & Event Management',
-    description: 'Creating spectacular celebrations across India for 18+ years.',
+    description: 'Creating spectacular celebrations across India for 11+ years.',
     images: [{ url: '/images/og-image.jpg', width: 1200, height: 630, alt: 'Wedding Gurukul' }],
   },
+
   twitter: {
     card: 'summary_large_image',
     title: 'Wedding Gurukul',
     description: 'Luxury Wedding Decor & Event Management across India',
     images: ['/images/og-image.jpg'],
   },
+
   robots: { index: true, follow: true },
 }
 

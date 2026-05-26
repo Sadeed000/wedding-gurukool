@@ -12,7 +12,7 @@ const navLinks = [
   {
     label: 'Our Work',
     children: [
-      { href: '/wedding-wall', label: 'Wedding Wall' },
+      // { href: '/wedding-wall', label: 'Wedding Wall' },
       { href: '/portfolio', label: 'Portfolio' },
     ],
   },
@@ -62,11 +62,11 @@ export default function Navbar() {
       <div className={cn('hidden lg:flex items-center justify-end gap-6 px-8 py-2 text-xs border-b transition-all duration-300', transparent ? 'border-white/15' : 'border-gold-100')}>
         {/* Phone and email commented out per request; keeping in file for reference */}
         *
-        <a href="tel:+917417416461" className={cn('flex items-center gap-2 transition-colors hover:text-gold-600', transparent ? 'text-white/75' : 'text-gold-500')}>
-          <Phone size={11} /> +91 7417416461
+        <a href="tel:+919782667589" className={cn('flex items-center gap-2 transition-colors hover:text-gold-600', transparent ? 'text-white/75' : 'text-gold-500')}>
+          <Phone size={11} /> +91 9782667589
         </a>
-        <a href="mailto:dhakadp992@gmail.com" className={cn('transition-colors hover:text-gold-600', transparent ? 'text-white/75' : 'text-gold-500')}>
-          dhakadp992@gmail.com
+        <a href="mailto:weddinggurukuljpr@gmail.com" className={cn('transition-colors hover:text-gold-600', transparent ? 'text-white/75' : 'text-gold-500')}>
+          weddinggurukuljpr@gmail.com
         </a>
        
 
@@ -231,8 +231,8 @@ export default function Navbar() {
           <div className="pt-4 space-y-3">
             {/* Phone commented out per request; kept as reference */}
             {/**
-            <a href="tel:+917417416461" className="flex items-center gap-2 text-sm text-charcoal-600">
-              <Phone size={14} className="text-gold-500" /> +91 7417416461
+            <a href="tel:+919782667589" className="flex items-center gap-2 text-sm text-charcoal-600">
+              <Phone size={14} className="text-gold-500" /> +91 9782667589
             </a>
             */}
             <a

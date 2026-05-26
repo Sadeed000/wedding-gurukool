@@ -12,13 +12,13 @@ const slides = [
   },
   {
     image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1920&q=90',
-    tagline: '18+ Years of Spectacular Celebrations',
+    tagline: '11+ Years of Spectacular Celebrations',
     headline: 'Every Detail,\nPerfectly Crafted',
     sub: 'From intimate mehendi ceremonies to grand multi-day extravaganzas — we do it all.',
   },
   {
     image: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1920&q=90',
-    tagline: '550+ Weddings Across India',
+    tagline: '300+ Weddings Across India',
     headline: 'Your Story,\nOur Masterpiece',
     sub: 'Every love story deserves a celebration as unique and unforgettable as the two of you.',
   },
@@ -140,8 +140,8 @@ export default function HeroSection() {
 
             {/* Quick contact */}
             <div className="flex items-center gap-3 mt-8">
-              <a href="tel:+917417416461" className="flex items-center gap-2 text-white/50 hover:text-gold-300 transition-colors font-dm-sans text-sm">
-                <Phone size={14} className="text-gold-400" /> +91 7417416461
+              <a href="tel:+919782667589" className="flex items-center gap-2 text-white/50 hover:text-gold-300 transition-colors font-dm-sans text-sm">
+                <Phone size={14} className="text-gold-400" /> +91 9782667589
               </a>
               <span className="text-white/20">·</span>
               <span className="text-white/40 font-dm-sans text-xs">Free consultation available</span>

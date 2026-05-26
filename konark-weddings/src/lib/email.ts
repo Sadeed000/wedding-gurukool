@@ -24,7 +24,7 @@ export async function sendContactEmail(data: ContactEmailData) {
 
   await transporter.sendMail({
     from: process.env.EMAIL_FROM || 'Wedding Gurukuls <noreply@konarkweddings.com>',
-    to: process.env.CONTACT_EMAIL || 'dhakadp992@gmail.com',
+    to: process.env.CONTACT_EMAIL || 'weddinggurukuljpr@gmail.com',
     subject: `New Enquiry from ${name}`,
     html: `
       <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #fdf9f0; padding: 40px;">
@@ -54,7 +54,7 @@ export async function sendContactEmail(data: ContactEmailData) {
         <p style="color: #574840; line-height: 1.8;">We have received your enquiry and our team will get back to you within 24 hours.</p>
         <p style="color: #574840; line-height: 1.8;">In the meantime, feel free to explore our portfolio and wedding stories at konarkweddings.com</p>
         <div style="margin-top: 30px; padding: 20px; background: #fff; border-left: 4px solid #c9922a;">
-          <p style="color: #7a6a60; font-size: 14px; margin: 0;">Warm regards,<br><strong style="color: #2d2520;">The Wedding Gurukuls Team</strong><br>+91 7417416461 | dhakadp992@gmail.com</p>
+          <p style="color: #7a6a60; font-size: 14px; margin: 0;">Warm regards,<br><strong style="color: #2d2520;">The Wedding Gurukuls Team</strong><br>+91 9782667589 | weddinggurukuljpr@gmail.com</p>
         </div>
       </div>
     `,

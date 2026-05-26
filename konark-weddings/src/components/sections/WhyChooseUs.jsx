@@ -2,11 +2,11 @@
 import { Award, Heart, Globe, Users, Star, Shield } from 'lucide-react'
 
 const reasons = [
-  { icon: Award, title: '18+ Years of Excellence', desc: "Nearly two decades crafting India's most iconic weddings — our experience and execution are unmatched." },
+  { icon: Award, title: '11+ Years of Excellence', desc: "Nearly two decades crafting India's most iconic weddings — our experience and execution are unmatched." },
   { icon: Heart, title: 'Deeply Personal Approach', desc: 'We listen first. Every wedding is built around your unique love story, personality and vision.' },
-  { icon: Globe, title: '200+ Destinations', desc: "From Rajasthan's palaces to Goa's beaches — we orchestrate dream weddings all across India." },
+  { icon: Globe, title: '60+ Destinations', desc: "From Rajasthan's palaces to Goa's beaches — we orchestrate dream weddings all across India." },
   { icon: Users, title: 'Full-Service In-House Team', desc: 'Designers, florists, coordinators, logistics — one team, one seamless experience from start to finish.' },
-  { icon: Star, title: '550+ Celebrations', desc: 'A legacy of spectacular celebrations, each one a testament to our passion for perfection and detail.' },
+  { icon: Star, title: '300+ Celebrations', desc: 'A legacy of spectacular celebrations, each one a testament to our passion for perfection and detail.' },
   { icon: Shield, title: 'Trusted by Top Families', desc: 'Families of distinction choose Wedding Gurukul for our discretion, expertise, and flawless execution.' },
 ]
 

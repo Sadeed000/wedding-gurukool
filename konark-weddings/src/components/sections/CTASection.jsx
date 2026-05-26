@@ -42,10 +42,10 @@ export default function CTASection() {
                 <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="tel:+917417416461"
+                href="tel:+919782667589"
                 className="flex items-center gap-2 border border-white/40 text-white px-8 py-4 font-dm-sans font-semibold text-sm tracking-wide hover:bg-white hover:text-charcoal-900 transition-all duration-300"
               >
-                <Phone size={15} /> +91 7417416461
+                <Phone size={15} /> +91 9782667589
               </a>
             </div>
 
@@ -61,7 +61,7 @@ export default function CTASection() {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-gold-400" />
-                18+ years of trust
+                11+ years of trust
               </div>
             </div>
           </div>

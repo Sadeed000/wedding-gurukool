@@ -213,11 +213,11 @@ export default async function VenueDetailPage({ params }) {
                 </Link>
 
                 <div className="mt-7 pt-7 border-t border-gold-100 space-y-3">
-                  <a href="tel:+917417416461" className="flex items-center gap-3 text-charcoal-600 hover:text-gold-500 transition-colors font-dm-sans text-sm">
-                    <Phone size={15} className="text-gold-400" /> +91 7417416461
+                  <a href="tel:+919782667589" className="flex items-center gap-3 text-charcoal-600 hover:text-gold-500 transition-colors font-dm-sans text-sm">
+                    <Phone size={15} className="text-gold-400" /> +91 9782667589
                   </a>
-                  <a href="mailto:dhakadp992@gmail.com" className="flex items-center gap-3 text-charcoal-600 hover:text-gold-500 transition-colors font-dm-sans text-sm">
-                    <Mail size={15} className="text-gold-400" /> dhakadp992@gmail.com
+                  <a href="mailto:weddinggurukuljpr@gmail.com" className="flex items-center gap-3 text-charcoal-600 hover:text-gold-500 transition-colors font-dm-sans text-sm">
+                    <Mail size={15} className="text-gold-400" /> weddinggurukuljpr@gmail.com
                   </a>
                 </div>
               </div>
