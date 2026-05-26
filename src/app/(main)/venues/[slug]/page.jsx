@@ -3,6 +3,10 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { MapPin, Users, Phone, Mail, CheckCircle, Star, ArrowRight, ArrowLeft, Wifi, Car, Utensils, Waves } from 'lucide-react'
 
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 const FALLBACK_IMG = 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1920&q=85'
 
 const STATIC_VENUES = {
@@ -47,11 +51,18 @@ const STATIC_VENUES = {
 
 async function getVenue(slug) {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
-    const res = await fetch(`${baseUrl}/api/venues/${slug}`, { next: { revalidate: 60 } })
+    const baseUrl = 'https://weddinggurukul.com'
+
+    const res = await fetch(`${baseUrl}/api/venues/${slug}`, {
+      cache: 'no-store',
+    })
+
     if (!res.ok) return null
-    return await res.json()
-  } catch {
+
+    const data = await res.json()
+    return data.venue || data
+  } catch (error) {
+    console.error('Venue fetch error:', error)
     return null
   }
 }
