@@ -81,8 +81,8 @@ export default async function EnquiriesPage({ searchParams }: EnquiriesPageProps
             </thead>
             <tbody>
               {enquiries.map((enquiry) => (
-                <tr key={enquiry._id} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 font-medium text-gray-800">{enquiry.name}</td>
+<tr key={String(enquiry._id)} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+  <td className="px-6 py-4 font-medium text-gray-800">{enquiry.name}</td>
                   <td className="px-6 py-4 text-gray-500 lowercase">{enquiry.email}</td>
                   <td className="px-6 py-4 text-gray-500">{enquiry.phone}</td>
                   <td className="px-6 py-4 text-gray-500">{enquiry.venue || '—'}</td>
