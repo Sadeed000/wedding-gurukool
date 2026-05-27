@@ -34,8 +34,8 @@ export default function HomePage() {
       <ServicesGrid />
       <ServicesProcess />
       <FeaturedGallery />
-      <VideoSection />
-      <DestinationsSection />
+   
+    
       <FeaturedStories />
       <TestimonialsSection />
       <AwardsSection />
