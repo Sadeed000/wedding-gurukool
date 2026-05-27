@@ -28,7 +28,7 @@ export default function CTASection() {
               Let's Create Your<br />
               <em className="text-gold-300">Dream Wedding</em>
             </h2>
-            <p className="font-dm-sans text-white/65 text-base lg:text-lg mb-10 max-w-lg leading-relaxed">
+<p className="font-dm-sans text-[#FFF7E8] text-base lg:text-lg mb-10 max-w-xl leading-relaxed drop-shadow-[0_3px_10px_rgba(0,0,0,0.95)]">
               Your love story deserves a celebration as spectacular as the two of you. Our team is ready to craft your perfect day — from concept to the last dance.
             </p>
 

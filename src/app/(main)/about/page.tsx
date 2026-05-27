@@ -48,8 +48,8 @@ export default function AboutPage() {
       {/* Hero */}
 <section className="relative w-screen h-[60vh] min-h-[430px] overflow-hidden left-1/2 -translate-x-1/2">
   <Image
-    src="https://images.unsplash.com/photo-1744891470493-44321ef136a2?q=90&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0"
-    alt="Wedding Gurukul team"
+    src="https://images.unsplash.com/photo-1779308936221-89739e035a53?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Wedding Gurukul team"
     fill
     priority
     quality={90}
@@ -160,7 +160,7 @@ export default function AboutPage() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/60 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="p-2">
                   <h3 className="font-cormorant text-xl text-charcoal-900 mb-1">{member.name}</h3>

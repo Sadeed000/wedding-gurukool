@@ -114,7 +114,7 @@ export default function VenuesPage() {
       {/* Hero */}
       <section className="relative w-screen h-[55vh] min-h-[420px] overflow-hidden left-1/2 -translate-x-1/2">
         <Image
-          src="https://plus.unsplash.com/premium_photo-1674498529225-0cabebf0d08e?w=1920&auto=format&fit=crop&q=90"
+          src="/static-image/venue.jpeg"
           alt="Venues"
           fill
           priority

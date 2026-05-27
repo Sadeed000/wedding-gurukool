@@ -468,6 +468,14 @@ export default function ContactPage() {
     referrerPolicy="no-referrer-when-downgrade"
     title="Wedding Gurukul Office Location"
   />
+
+  <a
+    href="https://share.google/B3LubwYxhxS5hmaDh"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Open Wedding Gurukul location in Google Maps"
+    className="absolute inset-0 z-10"
+  />
 </section>
     </>
   )
