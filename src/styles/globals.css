@@ -106,8 +106,6 @@ p {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
-/* Luxury button */
 .btn-gold {
   display: inline-flex;
   align-items: center;
@@ -127,6 +125,7 @@ p {
   overflow: hidden;
   transition: all 0.3s ease;
   text-decoration: none;
+  z-index: 1;
 }
 
 .btn-gold::before {
@@ -136,22 +135,25 @@ p {
   background: linear-gradient(135deg, #e3ad3f, #c9922a);
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 0;
+  z-index: -1;
 }
 
 .btn-gold:hover::before {
   opacity: 1;
 }
 
-/* .btn-gold:hover {
+.btn-gold:hover {
   color: white !important;
-  box-shadow: 0 8px 30px rgba(201, 146, 42, 0.4);
-  transform: translateY(-1px);
-} */
+}
+
+.btn-gold svg {
+  color: white !important;
+  stroke: white !important;
+}
 
 .btn-gold > * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Scroll animations */
@@ -274,21 +276,21 @@ p {
 
 /* Section spacing */
 .section-padding {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding-top: 9rem;
-    padding-bottom: 9rem;
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
   }
 }
 

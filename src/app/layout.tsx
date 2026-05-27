@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Cormorant_Garamond, DM_Sans, Playfair_Display } from 'next/font/google'
 import '@/styles/globals.css'
 import { Toaster } from 'react-hot-toast'
@@ -37,9 +38,9 @@ export const metadata: Metadata = {
 
   description: 'With 11+ years of expertise, Wedding Gurukul has delivered 300+ spectacular celebrations across India. Luxury wedding decor, planning, and event management.',
   icons: {
-    icon: 'images/logo-transparent.png',
-    shortcut: 'images/logo-transparent.png',
-    apple: 'images/logo-transparent.png',
+    icon: '/images/logo-transparent.png',
+    shortcut: '/images/logo-transparent.png',
+    apple: '/images/logo-transparent.png',
   },
 
   keywords: ['luxury wedding', 'wedding decor', 'event management', 'wedding planner India', 'Rajasthani wedding', 'destination wedding'],
@@ -70,7 +71,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${playfair.variable}`}>
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DE7GZTY7HJ"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DE7GZTY7HJ');
+          `}
+        </Script>
+
         {children}
+
         <Toaster
           position="top-right"
           toastOptions={{

@@ -36,7 +36,7 @@ export default function HomePage() {
       <FeaturedGallery />
    
     
-      <FeaturedStories />
+      {/* <FeaturedStories /> */}
       <TestimonialsSection />
       <AwardsSection />
       {/* <BlogPreview /> */}

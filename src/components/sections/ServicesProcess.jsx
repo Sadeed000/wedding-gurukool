@@ -32,7 +32,7 @@ export default function ServicesProcess() {
   return (
     <section className="section-padding bg-white px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <span className="section-label">Our Process</span>
           <div className="gold-divider my-4">
             <span className="ornament">✦</span>
