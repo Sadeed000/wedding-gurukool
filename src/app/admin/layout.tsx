@@ -30,6 +30,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Sign out, then redirect on the current host. We avoid NextAuth's built-in
+  // callbackUrl redirect because it resolves against NEXTAUTH_URL, which can
+  // point at a different port/host and break the redirect.
+  async function handleSignOut() {
+    await signOut({ redirect: false });
+    window.location.href = '/admin/login';
+  }
+
   if (pathname === '/admin/login') return <>{children}</>;
 
   return (
@@ -46,7 +54,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <button onClick={() => signOut({ callbackUrl: '/admin/login' })} className="text-sm text-[#fbf6ec]/80">Sign Out</button>
+          <button onClick={handleSignOut} className="text-sm text-[#fbf6ec]/80">Sign Out</button>
         </div>
       </div>
 
@@ -107,7 +115,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </a>
 
           <button
-            onClick={() => signOut({ callbackUrl: '/admin/login' })}
+            onClick={handleSignOut}
             className="w-full flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-medium text-[#fbf6ec]/60 hover:bg-red-500/10 hover:text-red-300 transition-all"
           >
             <LogOut size={18} className="text-red-300" />
@@ -163,7 +171,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               <a href="/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-medium text-[#fbf6ec]/60 hover:bg-[#261e1b] hover:text-[#fbf6ec] transition-all">
                 <ExternalLink size={18} className="text-[#d39a27]" /> View Site
               </a>
-              <button onClick={() => signOut({ callbackUrl: '/admin/login' })} className="w-full flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-medium text-[#fbf6ec]/60 hover:bg-red-500/10 hover:text-red-300 transition-all">
+              <button onClick={handleSignOut} className="w-full flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-medium text-[#fbf6ec]/60 hover:bg-red-500/10 hover:text-red-300 transition-all">
                 <LogOut size={18} className="text-red-300" /> Sign Out
               </button>
             </div>

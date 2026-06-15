@@ -118,7 +118,8 @@ export default function AdminVenuesPage() {
           : [],
         amenities: form.amenities
           ? form.amenities
-              .split(',')
+              // Split on commas, but keep commas inside numbers (e.g. "1,000")
+              .split(/,(?!\d)|(?<!\d),/)
               .map(s => s.trim())
               .filter(Boolean)
           : [],
