@@ -17,8 +17,16 @@ export async function GET(req) {
     const category = searchParams.get('category')
     const featured = searchParams.get('featured')
     const search = searchParams.get('search')
+    const all = searchParams.get('all') === 'true'
 
-    const query = { published: true }
+    // Admins can request all posts (including drafts); the public list is published-only.
+    let includeDrafts = false
+    if (all) {
+      const session = await getServerSession(authOptions)
+      includeDrafts = !!session
+    }
+
+    const query = includeDrafts ? {} : { published: true }
     if (category && category !== 'All') query.category = category
     if (featured === 'true') query.featured = true
     if (search) query.$or = [

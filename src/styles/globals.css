@@ -29,7 +29,10 @@
 }
 
 html {
-  overflow-x: hidden;
+  /* `clip` prevents horizontal scroll WITHOUT creating a scroll container,
+     so `position: sticky` (e.g. the blog Table of Contents) keeps working.
+     `hidden` would silently break sticky on descendants. */
+  overflow-x: clip;
 }
 
 body {
@@ -38,7 +41,7 @@ body {
   font-family: var(--font-dm-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Typography */
@@ -309,6 +312,7 @@ p {
   color: var(--color-charcoal);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
+  scroll-margin-top: 6rem;
 }
 
 .prose-luxury h3 {
@@ -317,11 +321,60 @@ p {
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
+  scroll-margin-top: 6rem;
+}
+
+.prose-luxury h4 {
+  font-family: var(--font-cormorant);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  scroll-margin-top: 6rem;
 }
 
 .prose-luxury p {
   margin-bottom: 1.5rem;
 }
+
+.prose-luxury a {
+  color: var(--color-gold-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-cream-dark);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  font-weight: 500;
+}
+
+.prose-luxury a:hover {
+  color: var(--color-gold);
+  text-decoration-color: var(--color-gold);
+}
+
+.prose-luxury strong { font-weight: 600; color: var(--color-charcoal); }
+
+.prose-luxury mark {
+  background: linear-gradient(120deg, rgba(227, 173, 63, 0.35) 0%, rgba(245, 231, 184, 0.55) 100%);
+  color: inherit;
+  padding: 0.05em 0.25em;
+  border-radius: 3px;
+}
+
+.prose-luxury ul,
+.prose-luxury ol {
+  margin: 0 0 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose-luxury ul { list-style: disc; }
+.prose-luxury ol { list-style: decimal; }
+
+.prose-luxury li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+}
+
+.prose-luxury li::marker { color: var(--color-gold); }
 
 .prose-luxury blockquote {
   border-left: 3px solid var(--color-gold);
@@ -332,6 +385,101 @@ p {
   font-style: italic;
   color: var(--color-charcoal-mid);
 }
+
+/* Tables */
+.prose-luxury table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(26, 22, 18, 0.06);
+}
+
+.prose-luxury thead th,
+.prose-luxury th {
+  background: linear-gradient(135deg, #c9922a, #e3ad3f);
+  color: #fff;
+  font-family: var(--font-dm-sans);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.85rem 1rem;
+}
+
+.prose-luxury td {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #f4dfaa;
+}
+
+.prose-luxury tbody tr:nth-child(even) { background: var(--color-cream); }
+
+/* Images & figures */
+.prose-luxury img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 8px 30px rgba(26, 22, 18, 0.12);
+}
+
+.prose-luxury figure { margin: 2rem 0; }
+
+.prose-luxury figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.6rem;
+  font-style: italic;
+}
+
+/* Inline & block code */
+.prose-luxury code {
+  background: var(--color-cream-dark);
+  color: var(--color-gold-dark);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.875em;
+}
+
+.prose-luxury pre {
+  background: var(--color-charcoal);
+  color: #f5e7b8;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.prose-luxury pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* Divider */
+.prose-luxury hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin: 3rem 0;
+}
+
+/* Callout / tip box */
+.prose-luxury .callout {
+  background: var(--color-cream);
+  border: 1px solid var(--color-cream-dark);
+  border-left: 4px solid var(--color-gold);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin: 1.75rem 0;
+}
+
+.prose-luxury .callout p { margin: 0; }
 
 /* Loading skeleton */
 .skeleton {

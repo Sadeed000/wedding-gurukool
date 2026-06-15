@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { Plus, Pencil, Trash2, Eye, EyeOff, Star, Upload, X, Loader2 } from 'lucide-react'
 import toast from 'react-hot-toast'
+import RichTextEditor from '@/components/admin/RichTextEditor'
 
 const EMPTY = { title: '', slug: '', excerpt: '', content: '', category: 'Decor', author: 'Wedding Gurukul', tags: '', published: false, featured: false, metaTitle: '', metaDescription: '', metaKeywords: '', featuredImage: '' }
 const CATEGORIES = ['Decor', 'Planning Tips', 'Venue Spotlight', 'Real Weddings', 'Trends', 'Food & Cuisine', 'Travel', 'Behind the Scenes']
@@ -19,9 +20,8 @@ export default function AdminBlogsPage() {
   async function load() {
     setLoading(true)
     try {
-      const res = await fetch('/api/blogs?limit=50')
+      const res = await fetch('/api/blogs?limit=100&all=true', { cache: 'no-store' })
       const data = await res.json()
-      // Also fetch drafts via admin - try all posts
       setPosts(data.posts || [])
     } catch { toast.error('Failed to load posts') }
     setLoading(false)
@@ -116,7 +116,7 @@ export default function AdminBlogsPage() {
       {/* Modal */}
       {showForm && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-2xl w-full max-w-3xl shadow-xl my-6">
+          <div className="bg-white rounded-2xl w-full max-w-4xl shadow-xl my-6">
             <div className="flex items-center justify-between p-6 border-b border-gray-100">
               <h2 className="text-xl font-semibold text-gray-800">{editId ? 'Edit Post' : 'New Blog Post'}</h2>
               <button onClick={() => setShowForm(false)} className="text-gray-400 hover:text-gray-600"><X size={20} /></button>
@@ -150,8 +150,8 @@ export default function AdminBlogsPage() {
                         {uploading ? 'Uploading…' : 'Upload Image'}
                         <input type="file" accept="image/*" className="hidden" onChange={handleUpload} disabled={uploading} />
                       </label>
-                      <span className="text-xs text-gray-400 self-center">or paste URL:</span>
-                      <input value={form.featuredImage} onChange={e => set('featuredImage', e.target.value)} placeholder="https://…" className="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#c9922a]" />
+                      {/* <span className="text-xs text-gray-400 self-center">or paste URL:</span>
+                      <input value={form.featuredImage} onChange={e => set('featuredImage', e.target.value)} placeholder="https://…" className="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#c9922a]" /> */}
                     </div>
                   </div>
 
@@ -185,11 +185,12 @@ export default function AdminBlogsPage() {
 
               {activeTab === 'content' && (
                 <div>
-                  <label className="block text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">Content (HTML supported)</label>
-                  <textarea rows={18} value={form.content} onChange={e => set('content', e.target.value)}
-                    placeholder="<p>Write your blog content here. HTML tags are supported.</p>"
-                    className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm font-mono focus:outline-none focus:border-[#c9922a] resize-none" />
-                  <p className="text-xs text-gray-400 mt-2">Supports HTML: &lt;h2&gt;, &lt;p&gt;, &lt;blockquote&gt;, &lt;ul&gt;, &lt;strong&gt;, etc.</p>
+                  <label className="block text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Blog Content</label>
+                  <RichTextEditor value={form.content} onChange={v => set('content', v)} />
+                  <p className="text-xs text-gray-400 mt-2">
+                    Use the toolbar to add headings, <strong>highlights</strong>, interlinks/backlinks, tables, images & more.
+                    Headings (H2/H3) automatically build the Table of Contents shown to readers. Toggle the eye icon for raw HTML.
+                  </p>
                 </div>
               )}
 

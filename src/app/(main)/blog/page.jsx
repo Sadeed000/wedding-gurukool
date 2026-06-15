@@ -263,16 +263,35 @@ export default function BlogPage() {
                 </Link>
               )}
 
+              {/* Grid heading */}
+              {rest.length > 0 && (
+                <div className="flex items-end justify-between mb-8">
+                  <div>
+                    <span className="section-label text-gold">Latest Stories</span>
+                    <h2 className="font-cormorant text-3xl lg:text-4xl text-charcoal-900 mt-1">
+                      Fresh from the Journal
+                    </h2>
+                  </div>
+                  <span className="hidden sm:block font-dm-sans text-xs text-charcoal-400">
+                    {rest.length} {rest.length === 1 ? 'article' : 'articles'}
+                  </span>
+                </div>
+              )}
+
               {/* Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {rest.map((post) => {
                   const imageSrc = getImageSrc(post.featuredImage)
+                  const authorName =
+                    typeof post.author === 'object' && post.author !== null
+                      ? post.author.name
+                      : post.author
 
                   return (
                     <Link
                       key={String(post._id || post.slug)}
                       href={`/blog/${post.slug}`}
-                      className="group bg-white shadow-card card-hover block"
+                      className="group bg-white shadow-card card-hover rounded-xl overflow-hidden block"
                     >
                       <div className="relative h-52 overflow-hidden bg-cream-100">
                         {imageSrc ? (
@@ -281,7 +300,7 @@ export default function BlogPage() {
                             alt={post.title || 'Blog'}
                             fill
                             unoptimized
-                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                             sizes="400px"
                           />
                         ) : (
@@ -292,9 +311,11 @@ export default function BlogPage() {
                           </div>
                         )}
 
+                        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/45 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
                         {post.category && (
                           <div
-                            className={`absolute top-4 left-4 px-3 py-1 font-dm-sans text-[10px] rounded-sm ${
+                            className={`absolute top-4 left-4 px-3 py-1 font-dm-sans text-[10px] rounded-full backdrop-blur-sm ${
                               CATEGORY_COLORS[post.category] ||
                               'bg-gold-50 text-gold-600'
                             }`}
@@ -305,21 +326,32 @@ export default function BlogPage() {
                       </div>
 
                       <div className="p-6">
+                        <div className="flex items-center gap-2 font-dm-sans text-xs text-charcoal-400 mb-3">
+                          <Calendar size={11} /> {formatDate(post.createdAt)}
+                        </div>
+
                         <h3 className="font-cormorant text-xl text-charcoal-900 mb-3 group-hover:text-gold-600 transition-colors line-clamp-2">
                           {post.title}
                         </h3>
 
                         {post.excerpt && (
-                          <p className="font-dm-sans text-sm text-charcoal-600 leading-relaxed mb-4 line-clamp-3">
+                          <p className="font-dm-sans text-sm text-charcoal-600 leading-relaxed mb-5 line-clamp-3">
                             {post.excerpt}
                           </p>
                         )}
 
                         <div className="flex items-center justify-between border-t border-gold-50 pt-4">
-                          <div className="flex items-center gap-2 font-dm-sans text-xs text-charcoal-400">
-                            <Calendar size={11} /> {formatDate(post.createdAt)}
+                          <div className="flex items-center gap-2">
+                            {authorName && (
+                              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gold-500 text-white font-dm-sans text-[10px] font-semibold uppercase">
+                                {authorName.trim().charAt(0)}
+                              </span>
+                            )}
+                            <span className="font-dm-sans text-xs text-charcoal-500 line-clamp-1">
+                              {authorName || 'Wedding Gurukul'}
+                            </span>
                           </div>
-                          <span className="flex items-center gap-1 text-gold-500 font-dm-sans text-xs font-medium">
+                          <span className="flex items-center gap-1 text-gold-500 font-dm-sans text-xs font-medium group-hover:gap-2 transition-all">
                             Read <ArrowRight size={11} />
                           </span>
                         </div>
