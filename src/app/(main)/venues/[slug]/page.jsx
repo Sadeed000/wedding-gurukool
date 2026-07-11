@@ -98,7 +98,7 @@ export default async function VenueDetailPage({ params }) {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[65vh] min-h-[440px] overflow-hidden bg-charcoal-900">
+      <section className="relative h-[65vh] min-h-[640px] overflow-hidden bg-charcoal-900">
         {heroImage ? (
           <Image
             src={heroImage}

@@ -55,7 +55,7 @@ export default async function PortfolioDetailPage({ params }) {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[65vh] min-h-[440px] overflow-hidden">
+      <section className="relative h-[65vh] min-h-[640px] overflow-hidden">
         <Image src={item.featuredImage || FALLBACK_IMG} alt={item.title} fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/20 via-charcoal-900/30 to-charcoal-900/85" />
         <div className="relative z-10 h-full flex items-end pb-16 px-6">

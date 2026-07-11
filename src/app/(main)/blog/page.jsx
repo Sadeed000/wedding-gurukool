@@ -122,7 +122,7 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[45vh] min-h-[420px] overflow-hidden">
+      <section className="relative h-[45vh] min-h-[640px] overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1920&q=80"
           alt="Blog"

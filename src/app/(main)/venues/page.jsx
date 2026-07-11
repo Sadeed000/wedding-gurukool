@@ -112,7 +112,7 @@ export default function VenuesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative w-screen h-[55vh] min-h-[420px] overflow-hidden left-1/2 -translate-x-1/2">
+      <section className="relative w-screen h-[55vh] min-h-[640px] overflow-hidden left-1/2 -translate-x-1/2">
         <Image
           src="/static-image/venue.jpeg"
           alt="Venues"

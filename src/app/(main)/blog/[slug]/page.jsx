@@ -206,7 +206,7 @@ export default async function BlogPostPage({ params }) {
       <ReadingProgress />
 
       {/* Hero */}
-      <section className="relative h-[65vh] min-h-[420px] overflow-hidden bg-charcoal-900">
+      <section className="relative h-[65vh] min-h-[640px] overflow-hidden bg-charcoal-900">
         {heroImage ? (
           <Image
             src={heroImage}

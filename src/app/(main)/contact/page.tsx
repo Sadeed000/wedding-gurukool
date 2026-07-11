@@ -183,7 +183,7 @@ export default function ContactPage() {
     <>
       {/* Hero */}
 {/* Hero */}
-<section className="relative w-screen h-[45vh] min-h-[360px] overflow-hidden left-1/2 -translate-x-1/2">
+<section className="relative w-screen h-[45vh] min-h-[600px] overflow-hidden left-1/2 -translate-x-1/2">
   <Image
     src="https://images.unsplash.com/photo-1653821355736-0c2598d0a63e?q=90&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0"
     alt="Contact"

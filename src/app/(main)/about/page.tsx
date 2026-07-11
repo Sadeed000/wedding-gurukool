@@ -46,7 +46,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-<section className="relative w-screen h-[60vh] min-h-[430px] overflow-hidden left-1/2 -translate-x-1/2">
+<section className="relative w-screen h-[60vh] min-h-[640px] overflow-hidden left-1/2 -translate-x-1/2">
   <Image
     src="https://images.unsplash.com/photo-1779308936221-89739e035a53?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Wedding Gurukul team"
